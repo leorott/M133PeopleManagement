@@ -1,12 +1,13 @@
-version: '3'
+version: '3.1'
+
 services:
-  mysqldb:
-    platform: linux/x86_64 # for Mac M1
-    image: mariadb:latest
+  mysql:
+    platform: linux/x86_64
+    image: mysql:5.7
+    environment:
+      MYSQL_ROOT_PASSWORD: "admin"
+      MYSQL_DATABASE: "people_management"
+    volumes:
+      - ./.data/mysql:/var/lib/mysql
     ports:
       - "3306:3306"
-    volumes:
-      - ./db_data:/var/lib/mysql
-    restart: always
-    environment:
-      MYSQL_ROOT_PASSWORD: 123456
