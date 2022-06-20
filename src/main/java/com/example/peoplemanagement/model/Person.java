@@ -1,4 +1,4 @@
-package com.example.peoplemanagement.Model;
+package com.example.peoplemanagement.model;
 
 import lombok.Getter;
 import lombok.Setter;
