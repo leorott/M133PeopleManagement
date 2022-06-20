@@ -5,5 +5,19 @@
 </head>
 <body>
 <h1>Lagomio isch da e fancy persone verwaltig</h1>
+<ul th:each="person : ${people}">
+    <li>
+        <p th:text="${person.getName()}"></p>
+        <p th:text="${person.getSurname()}"></p>
+        <p th:text="${person.getEmail()}"></p>
+    </li>
+</ul>
 </body>
 </html>
+<script th:inline="javascript">
+    /*<![CDATA[*/
+
+    const people = /*[[${people}]]*/ 'default';
+    console.log(people);
+
+    /*]]>*/</script>
