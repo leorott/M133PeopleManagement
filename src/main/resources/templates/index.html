@@ -21,6 +21,9 @@
                 <h5 class="card-title" th:text="${person.getName()} + ' ' + ${person.getSurname()}"></h5>
                 <p class="card-text" th:text="${person.getEmail()}"></p>
                 <a href="#" class="btn btn-primary">Edit</a>
+                <a th:href="@{'/delete/' + ${person.getId()}}">
+                    <i class="bi bi-trash-fill btn btn-outline-danger"></i>
+                </a>
             </div>
         </div>
     </div>
@@ -32,6 +35,7 @@
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/js/bootstrap.bundle.min.js"
         integrity="sha384-pprn3073KE6tl6bjs2QrFaJGz5/SUsLqktiwsUTF55Jfv3qYSDhgCecCxMW52nD2"
         crossorigin="anonymous"></script>
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.8.3/font/bootstrap-icons.css">
 <script th:inline="javascript">
     /*<![CDATA[*/
 
