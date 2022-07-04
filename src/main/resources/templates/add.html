@@ -26,7 +26,11 @@
         </div>
         <div class="mb-3">
             <label for="email" class="form-label">Email address</label>
-            <input th:field="*{email}" type="text" class="form-control" id="email">
+            <input th:field="*{email}" type="email" class="form-control" id="email">
+        </div>
+        <div class="mb-3">
+            <label for="date" class="date">Date</label>
+            <input th:field="*{date}" type="date" class="form-control" id="date">
         </div>
         <button type="submit" class="btn btn-primary">Create</button>
     </form>
