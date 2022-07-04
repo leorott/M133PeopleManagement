@@ -37,4 +37,10 @@ public class MainController {
         personRepository.deleteById(id);
         return "redirect:/";
     }
+
+    @RequestMapping("/edit/{id}")
+    public String edit(Model model, @PathVariable("id") int id){
+        model.addAttribute("person", personRepository.findById(id));
+        return "add";
+    }
 }

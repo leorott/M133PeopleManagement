@@ -12,12 +12,22 @@ import java.sql.Date;
 @Entity
 public class Person {
     @Id
-    @GeneratedValue(strategy= GenerationType.AUTO)
-    @Getter private Integer id;
+    @GeneratedValue(strategy = GenerationType.AUTO)
+    @Getter
+    @Setter
+    private Integer id;
 
-    @Getter @Setter private String name;
-    @Getter @Setter private String surname;
-    @Getter @Setter private String email;
-    @Getter @Setter private Date date;
+    @Getter
+    @Setter
+    private String name;
+    @Getter
+    @Setter
+    private String surname;
+    @Getter
+    @Setter
+    private String email;
+    @Getter
+    @Setter
+    private Date date;
 
 }
