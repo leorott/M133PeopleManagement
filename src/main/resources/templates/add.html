@@ -17,7 +17,7 @@
 </div>
 <div class="container">
     <form th:action="@{'/create'}" th:object="${person}" method="post">
-        <input type="hidden" th:field="*{id}" />
+        <input type="hidden" th:field="*{id}"/>
         <div class="mb-3">
             <label for="first-name" class="form-label">first name</label>
             <input th:field="*{name}" type="text" class="form-control" id="first-name">
@@ -34,11 +34,23 @@
             <label for="date" class="date">Date</label>
             <input th:field="*{date}" type="date" class="form-control" id="date">
         </div>
+        <div class="mb-3">
+            <label for="gender" class="form-label">Gender</label>
+            <select class="form-control" id="gender" th:field="*{gender}">
+                <option value="m">m</option>
+                <option value="f">f</option>
+                <option value="d">d</option>
+            </select>
+        </div>
+
         <button type="submit" class="btn btn-primary">Save</button>
         <a th:href="@{'/'}" class="btn btn-primary">Back</a>
     </form>
 </div>
 </body>
 </html>
-<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-0evHe/X+R7YkIZDRvuzKMRqM+OrBnVFBL6DOitfPri4tjfHxaWutUpFmBp4vmVor" crossorigin="anonymous">
-<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/js/bootstrap.bundle.min.js" integrity="sha384-pprn3073KE6tl6bjs2QrFaJGz5/SUsLqktiwsUTF55Jfv3qYSDhgCecCxMW52nD2" crossorigin="anonymous"></script>
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet"
+      integrity="sha384-0evHe/X+R7YkIZDRvuzKMRqM+OrBnVFBL6DOitfPri4tjfHxaWutUpFmBp4vmVor" crossorigin="anonymous">
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-pprn3073KE6tl6bjs2QrFaJGz5/SUsLqktiwsUTF55Jfv3qYSDhgCecCxMW52nD2"
+        crossorigin="anonymous"></script>

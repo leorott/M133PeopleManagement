@@ -1,33 +1,24 @@
 package com.example.peoplemanagement.model;
 
+import lombok.Data;
 import lombok.Getter;
 import lombok.Setter;
+import org.springframework.format.annotation.DateTimeFormat;
 
-import javax.persistence.Entity;
-import javax.persistence.GeneratedValue;
-import javax.persistence.GenerationType;
-import javax.persistence.Id;
-import java.sql.Date;
+import javax.persistence.*;
+import java.util.Date;
 
 @Entity
+@Data
 public class Person {
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)
-    @Getter
-    @Setter
     private Integer id;
-
-    @Getter
-    @Setter
     private String name;
-    @Getter
-    @Setter
     private String surname;
-    @Getter
-    @Setter
     private String email;
-    @Getter
-    @Setter
+    @DateTimeFormat(pattern = "yyyy-MM-dd")
+    @Temporal(TemporalType.DATE)
     private Date date;
-
+    private String gender;
 }

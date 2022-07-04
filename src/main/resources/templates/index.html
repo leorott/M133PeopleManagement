@@ -22,6 +22,7 @@
                 <h5 class="card-title" th:text="${person.getName()} + ' ' + ${person.getSurname()}"></h5>
                 <p class="card-text" th:text="${person.getEmail()}"></p>
                 <p class="card-text" th:text="${person.getDate()}"></p>
+                <p class="card-text" th:text="${person.getGender()}"></p>
                 <a th:href="@{'/delete/' + ${person.getId()}}">
                     <i class="bi bi-trash-fill btn btn-outline-danger"></i>
                 </a>
